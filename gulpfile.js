@@ -3,16 +3,14 @@ var gulp = require("gulp");
 //=============================================================================
 //  paths
 //=============================================================================
-
-var minimist = require('minimist');
 var paths = {
 		devDir: 	"",
 		assetsDir: 	"assets",
-		scssDir: 	"assets/style" + site,
-		jsDir:		"assets/js" + site,
-		templateDir: "template" + site,
-		buildDir: 	"build" + site,
-		imgDir: 	"build" + site + "/img",
+		scssDir: 	"assets/style",
+		spriteDir: 	"assets/sprite",
+		jsDir:		"assets/js",
+		templateDir: "template",
+		buildDir: 	"build",
 	};
 
 //=============================================================================
@@ -65,7 +63,7 @@ gulp.task("sprite", function () {
 	var spriteData = ["pc","sp"]
 	for (var i = 0, len = spriteData.length; i < len; i++) {
 		console.log(spriteData[i]);
-		var img = gulp.src([paths.imgDir + "/" + spriteData[i] + "/*.*"])
+		var img = gulp.src([paths.spriteDir + "/" + spriteData[i] + "/*.*"])
 		.pipe(spritesmith({
 			imgName: "sprite_" + spriteData[i] + ".png",
 			cssName: "_img_" + spriteData[i] + ".scss",
@@ -76,16 +74,11 @@ gulp.task("sprite", function () {
 				sprite.name = sprite.name;
 			}
 		}));
-		img.img.pipe(gulp.dest(""));
+		img.img.pipe(gulp.dest( paths.buildDir + "/img/"));
 		img.css.pipe(gulp.dest( paths.scssDir ));
 	}
 });
 
-
-gulp.task('clean-sprite', function() {
-	return del('sprite.png');
-
-});
 
 //=============================================================================
 // JavaScript
@@ -140,17 +133,6 @@ gulp.task('clean', function() {
 	return del(paths.buildDir + '/include');
 });
 
-
-//=============================================================================
-// library
-//=============================================================================
-
-gulp.task('libs', function() {
-	gulp.src( paths.assetsDir + "/lib/**/*.*")
-	.pipe(gulp.dest(paths.buildDir + device + /lib/));
-});
-
-
 //=============================================================================
 // browser-sync
 //=============================================================================
@@ -160,10 +142,10 @@ gulp.task("browser-sync", function () {
 	browserSync({
 		server: {
 			baseDir: paths.buildDir + "/",
-			index  : "top.html"
+			index  : "index.html"
 		},
 		open : false,
-		notify: false //remove "Connected to Browser Sync"
+		notify: false	//remove "Connected to Browser Sync"
 	});
 });
 
@@ -176,10 +158,8 @@ gulp.task("reload", function () {
 //=============================================================================
 
 gulp.task("default",['browser-sync'], function() {
-	console.log("\n────────────────────\n\n" + paths.buildDir + "\n\n────────────────────\n");
 	gulp.watch( [paths.templateDir + "/**/*.html"] ,["template"]);
 	gulp.watch( paths.scssDir + "/**/*.scss" ,["sass-reload"]);
-	gulp.watch([paths.jsDir + "/**/*.js", "!" + paths.jsDir + "/lib/*.js" ],["js"]);
-	gulp.watch( paths.assetsDir + "/lib/**/*.*" ,["libs"]);
+	gulp.watch([paths.jsDir + "/**/*.js"],["js"]);
 	gulp.watch( [paths.assetsDir + "/**/*.*", paths.templateDir + "/**/*.*" ],["reload"]);
 });
