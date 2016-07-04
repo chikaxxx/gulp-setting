@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@import "common";
+
+$fg-gutter: golden-ratio(0em, 0);
+
+//=============================================================================
+//  Basic Layout
+//=============================================================================
+
+$font-size-base: 62.5%;
+
+html {
+	width: 100%;
+}
+
+body {
+	font-family : $font-hiragino;
+	word-break: normal;
+	color: $black;
+	background: url(#{$path_pc}/bg_pattern_01.jpg) repeat center top;
+	line-height: 1.2;
+	font-size: rem(16);
+	letter-spacing: ls(60);
+	border: 1px solid red;
+}
+
+a {
+	@include all-link(color, $text-color-01);
+	@include all-link(text-decoration, none);
+
+	&:hover {
+		cursor: pointer;
+		opacity: .8;
+	}
+}
+
+img {
+	vertical-align: bottom;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="text"],
+textarea,
+select,
+button {
+	outline: none;
+}
+

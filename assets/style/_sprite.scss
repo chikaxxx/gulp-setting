@@ -1,0 +1,569 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$bg-nabe01-vote-01-name: 'bg_nabe01_vote_01';
+$bg-nabe01-vote-01-x: 586px;
+$bg-nabe01-vote-01-y: 1463px;
+$bg-nabe01-vote-01-offset-x: -586px;
+$bg-nabe01-vote-01-offset-y: -1463px;
+$bg-nabe01-vote-01-width: 270px;
+$bg-nabe01-vote-01-height: 33px;
+$bg-nabe01-vote-01-total-width: 1682px;
+$bg-nabe01-vote-01-total-height: 1649px;
+$bg-nabe01-vote-01-image: 'img/pc/sprite.png';
+$bg-nabe01-vote-01: (586px, 1463px, -586px, -1463px, 270px, 33px, 1682px, 1649px, 'img/pc/sprite.png', 'bg_nabe01_vote_01', );
+$bg-nabe02-vote-01-name: 'bg_nabe02_vote_01';
+$bg-nabe02-vote-01-x: 1104px;
+$bg-nabe02-vote-01-y: 1330px;
+$bg-nabe02-vote-01-offset-x: -1104px;
+$bg-nabe02-vote-01-offset-y: -1330px;
+$bg-nabe02-vote-01-width: 270px;
+$bg-nabe02-vote-01-height: 33px;
+$bg-nabe02-vote-01-total-width: 1682px;
+$bg-nabe02-vote-01-total-height: 1649px;
+$bg-nabe02-vote-01-image: 'img/pc/sprite.png';
+$bg-nabe02-vote-01: (1104px, 1330px, -1104px, -1330px, 270px, 33px, 1682px, 1649px, 'img/pc/sprite.png', 'bg_nabe02_vote_01', );
+$bg-nabe03-vote-01-name: 'bg_nabe03_vote_01';
+$bg-nabe03-vote-01-x: 1394px;
+$bg-nabe03-vote-01-y: 1330px;
+$bg-nabe03-vote-01-offset-x: -1394px;
+$bg-nabe03-vote-01-offset-y: -1330px;
+$bg-nabe03-vote-01-width: 270px;
+$bg-nabe03-vote-01-height: 33px;
+$bg-nabe03-vote-01-total-width: 1682px;
+$bg-nabe03-vote-01-total-height: 1649px;
+$bg-nabe03-vote-01-image: 'img/pc/sprite.png';
+$bg-nabe03-vote-01: (1394px, 1330px, -1394px, -1330px, 270px, 33px, 1682px, 1649px, 'img/pc/sprite.png', 'bg_nabe03_vote_01', );
+$btn-coupon-01-name: 'btn_coupon_01';
+$btn-coupon-01-x: 144px;
+$btn-coupon-01-y: 1565px;
+$btn-coupon-01-offset-x: -144px;
+$btn-coupon-01-offset-y: -1565px;
+$btn-coupon-01-width: 201px;
+$btn-coupon-01-height: 39px;
+$btn-coupon-01-total-width: 1682px;
+$btn-coupon-01-total-height: 1649px;
+$btn-coupon-01-image: 'img/pc/sprite.png';
+$btn-coupon-01: (144px, 1565px, -144px, -1565px, 201px, 39px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_coupon_01', );
+$btn-facebook-01-name: 'btn_facebook_01';
+$btn-facebook-01-x: 1629px;
+$btn-facebook-01-y: 706px;
+$btn-facebook-01-offset-x: -1629px;
+$btn-facebook-01-offset-y: -706px;
+$btn-facebook-01-width: 10px;
+$btn-facebook-01-height: 19px;
+$btn-facebook-01-total-width: 1682px;
+$btn-facebook-01-total-height: 1649px;
+$btn-facebook-01-image: 'img/pc/sprite.png';
+$btn-facebook-01: (1629px, 706px, -1629px, -706px, 10px, 19px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_facebook_01', );
+$btn-nabe01-vote-name: 'btn_nabe01_vote';
+$btn-nabe01-vote-x: 1432px;
+$btn-nabe01-vote-y: 966px;
+$btn-nabe01-vote-offset-x: -1432px;
+$btn-nabe01-vote-offset-y: -966px;
+$btn-nabe01-vote-width: 240px;
+$btn-nabe01-vote-height: 55px;
+$btn-nabe01-vote-total-width: 1682px;
+$btn-nabe01-vote-total-height: 1649px;
+$btn-nabe01-vote-image: 'img/pc/sprite.png';
+$btn-nabe01-vote: (1432px, 966px, -1432px, -966px, 240px, 55px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_nabe01_vote', );
+$btn-nabe02-vote-name: 'btn_nabe02_vote';
+$btn-nabe02-vote-x: 1432px;
+$btn-nabe02-vote-y: 891px;
+$btn-nabe02-vote-offset-x: -1432px;
+$btn-nabe02-vote-offset-y: -891px;
+$btn-nabe02-vote-width: 240px;
+$btn-nabe02-vote-height: 55px;
+$btn-nabe02-vote-total-width: 1682px;
+$btn-nabe02-vote-total-height: 1649px;
+$btn-nabe02-vote-image: 'img/pc/sprite.png';
+$btn-nabe02-vote: (1432px, 891px, -1432px, -891px, 240px, 55px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_nabe02_vote', );
+$btn-nabe03-vote-name: 'btn_nabe03_vote';
+$btn-nabe03-vote-x: 1432px;
+$btn-nabe03-vote-y: 1041px;
+$btn-nabe03-vote-offset-x: -1432px;
+$btn-nabe03-vote-offset-y: -1041px;
+$btn-nabe03-vote-width: 240px;
+$btn-nabe03-vote-height: 55px;
+$btn-nabe03-vote-total-width: 1682px;
+$btn-nabe03-vote-total-height: 1649px;
+$btn-nabe03-vote-image: 'img/pc/sprite.png';
+$btn-nabe03-vote: (1432px, 1041px, -1432px, -1041px, 240px, 55px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_nabe03_vote', );
+$btn-pagetop-01-name: 'btn_pagetop_01';
+$btn-pagetop-01-x: 1432px;
+$btn-pagetop-01-y: 575px;
+$btn-pagetop-01-offset-x: -1432px;
+$btn-pagetop-01-offset-y: -575px;
+$btn-pagetop-01-width: 177px;
+$btn-pagetop-01-height: 161px;
+$btn-pagetop-01-total-width: 1682px;
+$btn-pagetop-01-total-height: 1649px;
+$btn-pagetop-01-image: 'img/pc/sprite.png';
+$btn-pagetop-01: (1432px, 575px, -1432px, -575px, 177px, 161px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_pagetop_01', );
+$btn-step01-01-name: 'btn_step01_01';
+$btn-step01-01-x: 0px;
+$btn-step01-01-y: 1330px;
+$btn-step01-01-offset-x: 0px;
+$btn-step01-01-offset-y: -1330px;
+$btn-step01-01-width: 344px;
+$btn-step01-01-height: 113px;
+$btn-step01-01-total-width: 1682px;
+$btn-step01-01-total-height: 1649px;
+$btn-step01-01-image: 'img/pc/sprite.png';
+$btn-step01-01: (0px, 1330px, 0px, -1330px, 344px, 113px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_step01_01', );
+$btn-step0203-01-name: 'btn_step0203_01';
+$btn-step0203-01-x: 492px;
+$btn-step0203-01-y: 747px;
+$btn-step0203-01-offset-x: -492px;
+$btn-step0203-01-offset-y: -747px;
+$btn-step0203-01-width: 627px;
+$btn-step0203-01-height: 100px;
+$btn-step0203-01-total-width: 1682px;
+$btn-step0203-01-total-height: 1649px;
+$btn-step0203-01-image: 'img/pc/sprite.png';
+$btn-step0203-01: (492px, 747px, -492px, -747px, 627px, 100px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_step0203_01', );
+$btn-twitter-01-name: 'btn_twitter_01';
+$btn-twitter-01-x: 1629px;
+$btn-twitter-01-y: 669px;
+$btn-twitter-01-offset-x: -1629px;
+$btn-twitter-01-offset-y: -669px;
+$btn-twitter-01-width: 21px;
+$btn-twitter-01-height: 17px;
+$btn-twitter-01-total-width: 1682px;
+$btn-twitter-01-total-height: 1649px;
+$btn-twitter-01-image: 'img/pc/sprite.png';
+$btn-twitter-01: (1629px, 669px, -1629px, -669px, 21px, 17px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_twitter_01', );
+$btn-vote-01-name: 'btn_vote_01';
+$btn-vote-01-x: 364px;
+$btn-vote-01-y: 1330px;
+$btn-vote-01-offset-x: -364px;
+$btn-vote-01-offset-y: -1330px;
+$btn-vote-01-width: 350px;
+$btn-vote-01-height: 75px;
+$btn-vote-01-total-width: 1682px;
+$btn-vote-01-total-height: 1649px;
+$btn-vote-01-image: 'img/pc/sprite.png';
+$btn-vote-01: (364px, 1330px, -364px, -1330px, 350px, 75px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_vote_01', );
+$btn-vote-cancel-01-name: 'btn_vote_cancel_01';
+$btn-vote-cancel-01-x: 1161px;
+$btn-vote-cancel-01-y: 545px;
+$btn-vote-cancel-01-offset-x: -1161px;
+$btn-vote-cancel-01-offset-y: -545px;
+$btn-vote-cancel-01-width: 200px;
+$btn-vote-cancel-01-height: 55px;
+$btn-vote-cancel-01-total-width: 1682px;
+$btn-vote-cancel-01-total-height: 1649px;
+$btn-vote-cancel-01-image: 'img/pc/sprite.png';
+$btn-vote-cancel-01: (1161px, 545px, -1161px, -545px, 200px, 55px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_vote_cancel_01', );
+$btn-vote-tweet-01-name: 'btn_vote_tweet_01';
+$btn-vote-tweet-01-x: 734px;
+$btn-vote-tweet-01-y: 1330px;
+$btn-vote-tweet-01-offset-x: -734px;
+$btn-vote-tweet-01-offset-y: -1330px;
+$btn-vote-tweet-01-width: 350px;
+$btn-vote-tweet-01-height: 55px;
+$btn-vote-tweet-01-total-width: 1682px;
+$btn-vote-tweet-01-total-height: 1649px;
+$btn-vote-tweet-01-image: 'img/pc/sprite.png';
+$btn-vote-tweet-01: (734px, 1330px, -734px, -1330px, 350px, 55px, 1682px, 1649px, 'img/pc/sprite.png', 'btn_vote_tweet_01', );
+$ico-badge-01-name: 'ico_badge_01';
+$ico-badge-01-x: 1432px;
+$ico-badge-01-y: 370px;
+$ico-badge-01-offset-x: -1432px;
+$ico-badge-01-offset-y: -370px;
+$ico-badge-01-width: 184px;
+$ico-badge-01-height: 185px;
+$ico-badge-01-total-width: 1682px;
+$ico-badge-01-total-height: 1649px;
+$ico-badge-01-image: 'img/pc/sprite.png';
+$ico-badge-01: (1432px, 370px, -1432px, -370px, 184px, 185px, 1682px, 1649px, 'img/pc/sprite.png', 'ico_badge_01', );
+$ico-check-01-name: 'ico_check_01';
+$ico-check-01-x: 1629px;
+$ico-check-01-y: 622px;
+$ico-check-01-offset-x: -1629px;
+$ico-check-01-offset-y: -622px;
+$ico-check-01-width: 33px;
+$ico-check-01-height: 27px;
+$ico-check-01-total-width: 1682px;
+$ico-check-01-total-height: 1649px;
+$ico-check-01-image: 'img/pc/sprite.png';
+$ico-check-01: (1629px, 622px, -1629px, -622px, 33px, 27px, 1682px, 1649px, 'img/pc/sprite.png', 'ico_check_01', );
+$ico-checked-01-name: 'ico_checked_01';
+$ico-checked-01-x: 1629px;
+$ico-checked-01-y: 575px;
+$ico-checked-01-offset-x: -1629px;
+$ico-checked-01-offset-y: -575px;
+$ico-checked-01-width: 33px;
+$ico-checked-01-height: 27px;
+$ico-checked-01-total-width: 1682px;
+$ico-checked-01-total-height: 1649px;
+$ico-checked-01-image: 'img/pc/sprite.png';
+$ico-checked-01: (1629px, 575px, -1629px, -575px, 33px, 27px, 1682px, 1649px, 'img/pc/sprite.png', 'ico_checked_01', );
+$ico-vote-01-name: 'ico_vote_01';
+$ico-vote-01-x: 1636px;
+$ico-vote-01-y: 428px;
+$ico-vote-01-offset-x: -1636px;
+$ico-vote-01-offset-y: -428px;
+$ico-vote-01-width: 38px;
+$ico-vote-01-height: 38px;
+$ico-vote-01-total-width: 1682px;
+$ico-vote-01-total-height: 1649px;
+$ico-vote-01-image: 'img/pc/sprite.png';
+$ico-vote-01: (1636px, 428px, -1636px, -428px, 38px, 38px, 1682px, 1649px, 'img/pc/sprite.png', 'ico_vote_01', );
+$ico-vote-02-name: 'ico_vote_02';
+$ico-vote-02-x: 1636px;
+$ico-vote-02-y: 486px;
+$ico-vote-02-offset-x: -1636px;
+$ico-vote-02-offset-y: -486px;
+$ico-vote-02-width: 38px;
+$ico-vote-02-height: 38px;
+$ico-vote-02-total-width: 1682px;
+$ico-vote-02-total-height: 1649px;
+$ico-vote-02-image: 'img/pc/sprite.png';
+$ico-vote-02: (1636px, 486px, -1636px, -486px, 38px, 38px, 1682px, 1649px, 'img/pc/sprite.png', 'ico_vote_02', );
+$ico-vote-03-name: 'ico_vote_03';
+$ico-vote-03-x: 1636px;
+$ico-vote-03-y: 370px;
+$ico-vote-03-offset-x: -1636px;
+$ico-vote-03-offset-y: -370px;
+$ico-vote-03-width: 38px;
+$ico-vote-03-height: 38px;
+$ico-vote-03-total-width: 1682px;
+$ico-vote-03-total-height: 1649px;
+$ico-vote-03-image: 'img/pc/sprite.png';
+$ico-vote-03: (1636px, 370px, -1636px, -370px, 38px, 38px, 1682px, 1649px, 'img/pc/sprite.png', 'ico_vote_03', );
+$img-lemon-01-name: 'img_lemon_01';
+$img-lemon-01-x: 1135px;
+$img-lemon-01-y: 279px;
+$img-lemon-01-offset-x: -1135px;
+$img-lemon-01-offset-y: -279px;
+$img-lemon-01-width: 274px;
+$img-lemon-01-height: 152px;
+$img-lemon-01-total-width: 1682px;
+$img-lemon-01-total-height: 1649px;
+$img-lemon-01-image: 'img/pc/sprite.png';
+$img-lemon-01: (1135px, 279px, -1135px, -279px, 274px, 152px, 1682px, 1649px, 'img/pc/sprite.png', 'img_lemon_01', );
+$img-vote-01-name: 'img_vote_01';
+$img-vote-01-x: 870px;
+$img-vote-01-y: 920px;
+$img-vote-01-offset-x: -870px;
+$img-vote-01-offset-y: -920px;
+$img-vote-01-width: 250px;
+$img-vote-01-height: 350px;
+$img-vote-01-total-width: 1682px;
+$img-vote-01-total-height: 1649px;
+$img-vote-01-image: 'img/pc/sprite.png';
+$img-vote-01: (870px, 920px, -870px, -920px, 250px, 350px, 1682px, 1649px, 'img/pc/sprite.png', 'img_vote_01', );
+$img-vote-02-name: 'img_vote_02';
+$img-vote-02-x: 1140px;
+$img-vote-02-y: 920px;
+$img-vote-02-offset-x: -1140px;
+$img-vote-02-offset-y: -920px;
+$img-vote-02-width: 250px;
+$img-vote-02-height: 350px;
+$img-vote-02-total-width: 1682px;
+$img-vote-02-total-height: 1649px;
+$img-vote-02-image: 'img/pc/sprite.png';
+$img-vote-02: (1140px, 920px, -1140px, -920px, 250px, 350px, 1682px, 1649px, 'img/pc/sprite.png', 'img_vote_02', );
+$img-vote-03-name: 'img_vote_03';
+$img-vote-03-x: 1432px;
+$img-vote-03-y: 0px;
+$img-vote-03-offset-x: -1432px;
+$img-vote-03-offset-y: 0px;
+$img-vote-03-width: 250px;
+$img-vote-03-height: 350px;
+$img-vote-03-total-width: 1682px;
+$img-vote-03-total-height: 1649px;
+$img-vote-03-image: 'img/pc/sprite.png';
+$img-vote-03: (1432px, 0px, -1432px, 0px, 250px, 350px, 1682px, 1649px, 'img/pc/sprite.png', 'img_vote_03', );
+$logo-copyright-01-name: 'logo_copyright_01';
+$logo-copyright-01-x: 1432px;
+$logo-copyright-01-y: 756px;
+$logo-copyright-01-offset-x: -1432px;
+$logo-copyright-01-offset-y: -756px;
+$logo-copyright-01-width: 190px;
+$logo-copyright-01-height: 115px;
+$logo-copyright-01-total-width: 1682px;
+$logo-copyright-01-total-height: 1649px;
+$logo-copyright-01-image: 'img/pc/sprite.png';
+$logo-copyright-01: (1432px, 756px, -1432px, -756px, 190px, 115px, 1682px, 1649px, 'img/pc/sprite.png', 'logo_copyright_01', );
+$logo-page-name: 'logo_page';
+$logo-page-x: 492px;
+$logo-page-y: 0px;
+$logo-page-offset-x: -492px;
+$logo-page-offset-y: 0px;
+$logo-page-width: 920px;
+$logo-page-height: 259px;
+$logo-page-total-width: 1682px;
+$logo-page-total-height: 1649px;
+$logo-page-image: 'img/pc/sprite.png';
+$logo-page: (492px, 0px, -492px, 0px, 920px, 259px, 1682px, 1649px, 'img/pc/sprite.png', 'logo_page', );
+$logo-page-voted-name: 'logo_page_voted';
+$logo-page-voted-x: 492px;
+$logo-page-voted-y: 545px;
+$logo-page-voted-offset-x: -492px;
+$logo-page-voted-offset-y: -545px;
+$logo-page-voted-width: 649px;
+$logo-page-voted-height: 182px;
+$logo-page-voted-total-width: 1682px;
+$logo-page-voted-total-height: 1649px;
+$logo-page-voted-image: 'img/pc/sprite.png';
+$logo-page-voted: (492px, 545px, -492px, -545px, 649px, 182px, 1682px, 1649px, 'img/pc/sprite.png', 'logo_page_voted', );
+$logo-site-01-name: 'logo_site_01';
+$logo-site-01-x: 1432px;
+$logo-site-01-y: 1116px;
+$logo-site-01-offset-x: -1432px;
+$logo-site-01-offset-y: -1116px;
+$logo-site-01-width: 137px;
+$logo-site-01-height: 98px;
+$logo-site-01-total-width: 1682px;
+$logo-site-01-total-height: 1649px;
+$logo-site-01-image: 'img/pc/sprite.png';
+$logo-site-01: (1432px, 1116px, -1432px, -1116px, 137px, 98px, 1682px, 1649px, 'img/pc/sprite.png', 'logo_site_01', );
+$logo-site-02-name: 'logo_site_02';
+$logo-site-02-x: 0px;
+$logo-site-02-y: 1565px;
+$logo-site-02-offset-x: 0px;
+$logo-site-02-offset-y: -1565px;
+$logo-site-02-width: 124px;
+$logo-site-02-height: 84px;
+$logo-site-02-total-width: 1682px;
+$logo-site-02-total-height: 1649px;
+$logo-site-02-image: 'img/pc/sprite.png';
+$logo-site-02: (0px, 1565px, 0px, -1565px, 124px, 84px, 1682px, 1649px, 'img/pc/sprite.png', 'logo_site_02', );
+$pic-kobayashi-01-name: 'pic_kobayashi_01';
+$pic-kobayashi-01-x: 0px;
+$pic-kobayashi-01-y: 0px;
+$pic-kobayashi-01-offset-x: 0px;
+$pic-kobayashi-01-offset-y: 0px;
+$pic-kobayashi-01-width: 472px;
+$pic-kobayashi-01-height: 900px;
+$pic-kobayashi-01-total-width: 1682px;
+$pic-kobayashi-01-total-height: 1649px;
+$pic-kobayashi-01-image: 'img/pc/sprite.png';
+$pic-kobayashi-01: (0px, 0px, 0px, 0px, 472px, 900px, 1682px, 1649px, 'img/pc/sprite.png', 'pic_kobayashi_01', );
+$pic-nabe01-01-name: 'pic_nabe01_01';
+$pic-nabe01-01-x: 0px;
+$pic-nabe01-01-y: 920px;
+$pic-nabe01-01-offset-x: 0px;
+$pic-nabe01-01-offset-y: -920px;
+$pic-nabe01-01-width: 270px;
+$pic-nabe01-01-height: 390px;
+$pic-nabe01-01-total-width: 1682px;
+$pic-nabe01-01-total-height: 1649px;
+$pic-nabe01-01-image: 'img/pc/sprite.png';
+$pic-nabe01-01: (0px, 920px, 0px, -920px, 270px, 390px, 1682px, 1649px, 'img/pc/sprite.png', 'pic_nabe01_01', );
+$pic-nabe02-01-name: 'pic_nabe02_01';
+$pic-nabe02-01-x: 580px;
+$pic-nabe02-01-y: 920px;
+$pic-nabe02-01-offset-x: -580px;
+$pic-nabe02-01-offset-y: -920px;
+$pic-nabe02-01-width: 270px;
+$pic-nabe02-01-height: 390px;
+$pic-nabe02-01-total-width: 1682px;
+$pic-nabe02-01-total-height: 1649px;
+$pic-nabe02-01-image: 'img/pc/sprite.png';
+$pic-nabe02-01: (580px, 920px, -580px, -920px, 270px, 390px, 1682px, 1649px, 'img/pc/sprite.png', 'pic_nabe02_01', );
+$pic-nabe03-01-name: 'pic_nabe03_01';
+$pic-nabe03-01-x: 290px;
+$pic-nabe03-01-y: 920px;
+$pic-nabe03-01-offset-x: -290px;
+$pic-nabe03-01-offset-y: -920px;
+$pic-nabe03-01-width: 270px;
+$pic-nabe03-01-height: 390px;
+$pic-nabe03-01-total-width: 1682px;
+$pic-nabe03-01-total-height: 1649px;
+$pic-nabe03-01-image: 'img/pc/sprite.png';
+$pic-nabe03-01: (290px, 920px, -290px, -920px, 270px, 390px, 1682px, 1649px, 'img/pc/sprite.png', 'pic_nabe03_01', );
+$txt-copyright-01-name: 'txt_copyright_01';
+$txt-copyright-01-x: 1161px;
+$txt-copyright-01-y: 706px;
+$txt-copyright-01-offset-x: -1161px;
+$txt-copyright-01-offset-y: -706px;
+$txt-copyright-01-width: 190px;
+$txt-copyright-01-height: 12px;
+$txt-copyright-01-total-width: 1682px;
+$txt-copyright-01-total-height: 1649px;
+$txt-copyright-01-image: 'img/pc/sprite.png';
+$txt-copyright-01: (1161px, 706px, -1161px, -706px, 190px, 12px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_copyright_01', );
+$txt-header-01-name: 'txt_header_01';
+$txt-header-01-x: 492px;
+$txt-header-01-y: 279px;
+$txt-header-01-offset-x: -492px;
+$txt-header-01-offset-y: -279px;
+$txt-header-01-width: 623px;
+$txt-header-01-height: 246px;
+$txt-header-01-total-width: 1682px;
+$txt-header-01-total-height: 1649px;
+$txt-header-01-image: 'img/pc/sprite.png';
+$txt-header-01: (492px, 279px, -492px, -279px, 623px, 246px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_header_01', );
+$txt-nabe01-copy-name: 'txt_nabe01_copy';
+$txt-nabe01-copy-x: 1139px;
+$txt-nabe01-copy-y: 747px;
+$txt-nabe01-copy-offset-x: -1139px;
+$txt-nabe01-copy-offset-y: -747px;
+$txt-nabe01-copy-width: 270px;
+$txt-nabe01-copy-height: 96px;
+$txt-nabe01-copy-total-width: 1682px;
+$txt-nabe01-copy-total-height: 1649px;
+$txt-nabe01-copy-image: 'img/pc/sprite.png';
+$txt-nabe01-copy: (1139px, 747px, -1139px, -747px, 270px, 96px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_nabe01_copy', );
+$txt-nabe01-name-name: 'txt_nabe01_name';
+$txt-nabe01-name-x: 1135px;
+$txt-nabe01-name-y: 451px;
+$txt-nabe01-name-offset-x: -1135px;
+$txt-nabe01-name-offset-y: -451px;
+$txt-nabe01-name-width: 187px;
+$txt-nabe01-name-height: 63px;
+$txt-nabe01-name-total-width: 1682px;
+$txt-nabe01-name-total-height: 1649px;
+$txt-nabe01-name-image: 'img/pc/sprite.png';
+$txt-nabe01-name: (1135px, 451px, -1135px, -451px, 187px, 63px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_nabe01_name', );
+$txt-nabe02-copy-name: 'txt_nabe02_copy';
+$txt-nabe02-copy-x: 0px;
+$txt-nabe02-copy-y: 1463px;
+$txt-nabe02-copy-offset-x: 0px;
+$txt-nabe02-copy-offset-y: -1463px;
+$txt-nabe02-copy-width: 276px;
+$txt-nabe02-copy-height: 82px;
+$txt-nabe02-copy-total-width: 1682px;
+$txt-nabe02-copy-total-height: 1649px;
+$txt-nabe02-copy-image: 'img/pc/sprite.png';
+$txt-nabe02-copy: (0px, 1463px, 0px, -1463px, 276px, 82px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_nabe02_copy', );
+$txt-nabe02-name-name: 'txt_nabe02_name';
+$txt-nabe02-name-x: 1432px;
+$txt-nabe02-name-y: 1234px;
+$txt-nabe02-name-offset-x: -1432px;
+$txt-nabe02-name-offset-y: -1234px;
+$txt-nabe02-name-width: 195px;
+$txt-nabe02-name-height: 62px;
+$txt-nabe02-name-total-width: 1682px;
+$txt-nabe02-name-total-height: 1649px;
+$txt-nabe02-name-image: 'img/pc/sprite.png';
+$txt-nabe02-name: (1432px, 1234px, -1432px, -1234px, 195px, 62px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_nabe02_name', );
+$txt-nabe03-copy-name: 'txt_nabe03_copy';
+$txt-nabe03-copy-x: 296px;
+$txt-nabe03-copy-y: 1463px;
+$txt-nabe03-copy-offset-x: -296px;
+$txt-nabe03-copy-offset-y: -1463px;
+$txt-nabe03-copy-width: 270px;
+$txt-nabe03-copy-height: 82px;
+$txt-nabe03-copy-total-width: 1682px;
+$txt-nabe03-copy-total-height: 1649px;
+$txt-nabe03-copy-image: 'img/pc/sprite.png';
+$txt-nabe03-copy: (296px, 1463px, -296px, -1463px, 270px, 82px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_nabe03_copy', );
+$txt-nabe03-name-name: 'txt_nabe03_name';
+$txt-nabe03-name-x: 1161px;
+$txt-nabe03-name-y: 620px;
+$txt-nabe03-name-offset-x: -1161px;
+$txt-nabe03-name-offset-y: -620px;
+$txt-nabe03-name-width: 156px;
+$txt-nabe03-name-height: 66px;
+$txt-nabe03-name-total-width: 1682px;
+$txt-nabe03-name-total-height: 1649px;
+$txt-nabe03-name-image: 'img/pc/sprite.png';
+$txt-nabe03-name: (1161px, 620px, -1161px, -620px, 156px, 66px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_nabe03_name', );
+$txt-step01-01-name: 'txt_step01_01';
+$txt-step01-01-x: 1589px;
+$txt-step01-01-y: 1116px;
+$txt-step01-01-offset-x: -1589px;
+$txt-step01-01-offset-y: -1116px;
+$txt-step01-01-width: 90px;
+$txt-step01-01-height: 34px;
+$txt-step01-01-total-width: 1682px;
+$txt-step01-01-total-height: 1649px;
+$txt-step01-01-image: 'img/pc/sprite.png';
+$txt-step01-01: (1589px, 1116px, -1589px, -1116px, 90px, 34px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_step01_01', );
+$txt-step01-date-01-name: 'txt_step01_date_01';
+$txt-step01-date-01-x: 492px;
+$txt-step01-date-01-y: 867px;
+$txt-step01-date-01-offset-x: -492px;
+$txt-step01-date-01-offset-y: -867px;
+$txt-step01-date-01-width: 382px;
+$txt-step01-date-01-height: 31px;
+$txt-step01-date-01-total-width: 1682px;
+$txt-step01-date-01-total-height: 1649px;
+$txt-step01-date-01-image: 'img/pc/sprite.png';
+$txt-step01-date-01: (492px, 867px, -492px, -867px, 382px, 31px, 1682px, 1649px, 'img/pc/sprite.png', 'txt_step01_date_01', );
+$spritesheet-width: 1682px;
+$spritesheet-height: 1649px;
+$spritesheet-image: 'img/pc/sprite.png';
+$spritesheet-sprites: ($bg-nabe01-vote-01, $bg-nabe02-vote-01, $bg-nabe03-vote-01, $btn-coupon-01, $btn-facebook-01, $btn-nabe01-vote, $btn-nabe02-vote, $btn-nabe03-vote, $btn-pagetop-01, $btn-step01-01, $btn-step0203-01, $btn-twitter-01, $btn-vote-01, $btn-vote-cancel-01, $btn-vote-tweet-01, $ico-badge-01, $ico-check-01, $ico-checked-01, $ico-vote-01, $ico-vote-02, $ico-vote-03, $img-lemon-01, $img-vote-01, $img-vote-02, $img-vote-03, $logo-copyright-01, $logo-page, $logo-page-voted, $logo-site-01, $logo-site-02, $pic-kobayashi-01, $pic-nabe01-01, $pic-nabe02-01, $pic-nabe03-01, $txt-copyright-01, $txt-header-01, $txt-nabe01-copy, $txt-nabe01-name, $txt-nabe02-copy, $txt-nabe02-name, $txt-nabe03-copy, $txt-nabe03-name, $txt-step01-01, $txt-step01-date-01, );
+$spritesheet: (1682px, 1649px, 'img/pc/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

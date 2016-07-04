@@ -144,7 +144,7 @@ gulp.task("browser-sync", function () {
 			baseDir: paths.buildDir + "/",
 			index  : "index.html"
 		},
-		open : false,
+		open : true,
 		notify: false	//remove "Connected to Browser Sync"
 	});
 });

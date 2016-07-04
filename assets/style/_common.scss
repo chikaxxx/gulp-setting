@@ -1,0 +1,170 @@
+@import "sprite";
+@import "reset";
+@import "bourbon";
+@import "neat";
+
+//=============================================================================
+// variables
+//=============================================================================
+
+$white : #ffffff;
+$black : #000000;
+
+$base-color-01: #250100;
+$base-color-02: #ba1b21;
+$base-color-03: #ff007f;
+$base-color-04: #ff007f;
+
+$text-color-01 : $base-color-01;
+$text-color-02 : $base-color-02;
+$text-color-03 : #ff007f;
+$text-color-04 : $base-color-03;
+
+$link-color-01 : $base-color-01;
+
+$bg-color-01 : $base-color-04;
+
+
+$border-color-01: $base-color-04;
+// $border-color-01: red;
+$border-color-02: #ff007f;
+
+$path_pc: "./img/pc/";
+$path_sp: "./img/sp/";
+$size: 640;
+
+$font-hiragino: "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "MS PGothic", sans-serif;
+$font-meiryo: Meiryo, "Hiragino Kaku Gothic Pro", Osaka, "MS PGothic", sans-serif;
+$font-yugothic: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+
+@font-face {
+	font-family: 'Lato';
+	src: url(font/Lato/Lato-Black.ttf);
+}
+
+$font-lato: "Lato", sans-serif;
+
+//=============================================================================
+// function, mixin
+//=============================================================================
+
+@mixin pc($width: 799px) {
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}
+
+@mixin sp($width: 798px) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@function chP($pSize, $wSize){
+	@return unquote( $pSize / $wSize * 100 + "%" );
+}
+
+@mixin perImgBasic($width,$height,$path){
+	width: chP($width, 640);
+	height: 0;
+	padding-bottom: chP($height, 640);
+	background: url(./img/sp/#{$path}.png) no-repeat;
+	background-size: contain;
+	@include hide-text;
+}
+
+@mixin perImg($width,$height,$base,$path){
+	width: chP($width, $base);
+	height: 0;
+	padding-bottom: chP($height, $base);
+	background: url(./img/sp/#{$path}.png) no-repeat;
+	background-size: contain;
+	@include hide-text;
+}
+
+@mixin pcImg($width,$height,$path){
+	width: $width + px;
+	height: $height + px;;
+	background: url(./img/pc/#{$path}.png) no-repeat;
+	background-size: contain;
+	@include hide-text;
+}
+
+
+@mixin headings($from: 1, $to: 6){
+	@for $i from $from through $to{
+		h#{$i}{
+			@content
+		}
+	}
+};
+
+@mixin sprElement($sprite){
+	content: "\0020";
+	display: block;
+	@include sprite($sprite);
+}
+
+@mixin all-link($property, $value) {
+	&:link,
+	&:visited,
+	&:focus,
+	&:hover,
+	&:active {
+		#{$property}:$value;
+	}
+}
+
+@mixin centering($horizontal: true, $vertical: true) {
+	position: absolute;
+
+	@if ($horizontal and $vertical) {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else if ($horizontal) {
+		left: 50%;
+		transform: translate(-50%, 0);
+	} @else if ($vertical) {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+
+@mixin ellipsisUnit {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@function ls($font-size) {
+	@return ($font-size / 1000)+em;
+}
+
+@function lh($font-size,$line-height) {
+	@return  $line-height / $font-size;
+}
+
+
+%hover01 {
+	@include pc {
+		&:hover {
+			background-color: $bg-color-01;
+			cursor: pointer;
+			transition: all .2s;
+		}
+	}
+}
+
+//=============================================================================
+//  utility CLASS
+//=============================================================================
+
+.is-hide {
+	display: none;
+}
+
+.is-block {
+	display: block;
+}
+
