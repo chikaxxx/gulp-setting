@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bourbon-neat": "^1.8.0",
     "browser-sync": "^2.13.0",
     "del": "^2.2.1",
     "gulp": "^3.9.1",

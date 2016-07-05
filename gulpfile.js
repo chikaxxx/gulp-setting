@@ -66,7 +66,7 @@ gulp.task("sprite", function () {
 		var img = gulp.src([paths.spriteDir + "/" + spriteData[i] + "/*.*"])
 		.pipe(spritesmith({
 			imgName: "sprite.png",
-			cssName: "_img_" + spriteData[i] + ".scss",
+			cssName: "_sprite_" + spriteData[i] + ".scss",
 			imgPath: "img/" + spriteData[i] + "/sprite.png",
 			cssFormat: "scss",
 			padding: 20,
@@ -74,7 +74,7 @@ gulp.task("sprite", function () {
 				sprite.name = sprite.name;
 			}
 		}));
-		img.img.pipe(gulp.dest( paths.buildDir + "/img/"));
+		img.img.pipe(gulp.dest( paths.buildDir + "/img/" + spriteData[i] + "/"));
 		img.css.pipe(gulp.dest( paths.scssDir ));
 	}
 });
@@ -142,7 +142,7 @@ gulp.task("browser-sync", function () {
 	browserSync({
 		server: {
 			baseDir: paths.buildDir + "/",
-			index  : "index.html"
+			index  : "strawberry.html"
 		},
 		open : true,
 		notify: false	//remove "Connected to Browser Sync"

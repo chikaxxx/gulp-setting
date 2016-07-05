@@ -13,11 +13,6 @@ $ npm install			#npmプラグインをインストール
 $ gulp					#これで動きます
 ```
 
-### フォルダ構成
-```
-あとで書く。
-```
-
 ## 実行
 #### gulpを実行する。
 ```bash
@@ -30,6 +25,31 @@ $ gulp sprite
 * 画像読み込み元	`assets/sprite/pc,sp/`  
 * 画像生成先	`build/img/pc,sp/sprite.png`
 * scss生成先		`assets/style/pc,sp/_sprite.scss`
+
+
+## フォルダ構成
+```
+├── README.md 
+├── assets 	
+│   ├── sprite 
+│   │   ├── pc 	- PCでpriteにする画像を格納
+│   │   └── sp 	- SPでpriteにする画像を格納
+│   └── style 	- Scssファイルの格納
+│       ├── _common.scss 	
+│       ├── _reset.scss 		- リセットCSS
+│       ├── _sprite_pc.scss 	- 自動生成される、PCスプライト用のscss
+│       ├── _sprite_sp.scss 	- 自動生成される、SPスプライト用のscss
+│       ├── pc.scss 			- PCのscss
+│       └── sp.scss 			- SPのscss
+├── build						- ビルド先フォルダ
+├── gulpfile.js 	
+├── package.json 	
+└── template					- HTML格納フォルダ
+    ├── include				- includeフォルダ
+    │   ├── footer.html 	
+    │   └── header.html 	
+    └── index.html			- 修正するHTMLファイル
+```
 
 ## gulpfile.jsの説明
 タスク・プラグインの説明です。

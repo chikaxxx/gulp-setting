@@ -8,21 +8,18 @@ $fg-gutter: golden-ratio(0em, 0);
 //  Basic Layout
 //=============================================================================
 
-$font-size-base: 62.5%;
-
 html {
 	width: 100%;
 }
 
 body {
-	font-family : $font-hiragino;
+	font-family : $font-yugothic;
 	word-break: normal;
 	color: $black;
 	background: url(#{$path_pc}/bg_pattern_01.jpg) repeat center top;
 	line-height: 1.2;
-	font-size: rem(16);
+	font-size: rem(14);
 	letter-spacing: ls(60);
-	border: 1px solid red;
 }
 
 a {
@@ -48,3 +45,50 @@ button {
 	outline: none;
 }
 
+//=============================================================================
+//  Styling
+//=============================================================================
+.ly-wrapper {
+	width: 600px;
+	margin: 0 auto;
+
+}
+.ly-header {
+	margin: 20px 0 20px;
+
+	ul {
+		@include clearfix;
+
+		li {
+			float: left;
+			margin-right: 10px;
+
+			a {
+				display: block;
+			}
+
+			&.hamburger a {
+				@include hide-text;
+				@include sprite($nav_icon_hamburger);
+			}
+
+			&.fruit a {
+				@include hide-text;
+				@include sprite($nav_icon_watermelon);
+			}
+
+			&.strawberry a {
+				@include hide-text;
+				@include sprite($nav_icon_strawberry);
+			}
+		}
+	}
+}
+
+.list {
+	dt {
+		font-weight: bold;
+		font-size: rem(16);
+		margin-bottom: 4px;
+	}
+}

@@ -1,0 +1,129 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$nav-icon-hamburger-name: 'nav_icon_hamburger';
+$nav-icon-hamburger-x: 0px;
+$nav-icon-hamburger-y: 0px;
+$nav-icon-hamburger-offset-x: 0px;
+$nav-icon-hamburger-offset-y: 0px;
+$nav-icon-hamburger-width: 65px;
+$nav-icon-hamburger-height: 64px;
+$nav-icon-hamburger-total-width: 150px;
+$nav-icon-hamburger-total-height: 148px;
+$nav-icon-hamburger-image: 'img/pc/sprite.png';
+$nav-icon-hamburger: (0px, 0px, 0px, 0px, 65px, 64px, 150px, 148px, 'img/pc/sprite.png', 'nav_icon_hamburger', );
+$nav-icon-mail-name: 'nav_icon_mail';
+$nav-icon-mail-x: 0px;
+$nav-icon-mail-y: 84px;
+$nav-icon-mail-offset-x: 0px;
+$nav-icon-mail-offset-y: -84px;
+$nav-icon-mail-width: 64px;
+$nav-icon-mail-height: 64px;
+$nav-icon-mail-total-width: 150px;
+$nav-icon-mail-total-height: 148px;
+$nav-icon-mail-image: 'img/pc/sprite.png';
+$nav-icon-mail: (0px, 84px, 0px, -84px, 64px, 64px, 150px, 148px, 'img/pc/sprite.png', 'nav_icon_mail', );
+$nav-icon-strawberry-name: 'nav_icon_strawberry';
+$nav-icon-strawberry-x: 85px;
+$nav-icon-strawberry-y: 0px;
+$nav-icon-strawberry-offset-x: -85px;
+$nav-icon-strawberry-offset-y: 0px;
+$nav-icon-strawberry-width: 65px;
+$nav-icon-strawberry-height: 64px;
+$nav-icon-strawberry-total-width: 150px;
+$nav-icon-strawberry-total-height: 148px;
+$nav-icon-strawberry-image: 'img/pc/sprite.png';
+$nav-icon-strawberry: (85px, 0px, -85px, 0px, 65px, 64px, 150px, 148px, 'img/pc/sprite.png', 'nav_icon_strawberry', );
+$nav-icon-watermelon-name: 'nav_icon_watermelon';
+$nav-icon-watermelon-x: 84px;
+$nav-icon-watermelon-y: 84px;
+$nav-icon-watermelon-offset-x: -84px;
+$nav-icon-watermelon-offset-y: -84px;
+$nav-icon-watermelon-width: 64px;
+$nav-icon-watermelon-height: 64px;
+$nav-icon-watermelon-total-width: 150px;
+$nav-icon-watermelon-total-height: 148px;
+$nav-icon-watermelon-image: 'img/pc/sprite.png';
+$nav-icon-watermelon: (84px, 84px, -84px, -84px, 64px, 64px, 150px, 148px, 'img/pc/sprite.png', 'nav_icon_watermelon', );
+$spritesheet-width: 150px;
+$spritesheet-height: 148px;
+$spritesheet-image: 'img/pc/sprite.png';
+$spritesheet-sprites: ($nav-icon-hamburger, $nav-icon-mail, $nav-icon-strawberry, $nav-icon-watermelon, );
+$spritesheet: (150px, 148px, 'img/pc/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
