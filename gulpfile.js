@@ -49,7 +49,7 @@ gulp.task("sass", function() {
 		sass: true,
 		minifier: false
 	}))
-	.pipe(gulp.dest( paths.buildDir + "/" ));
+	.pipe(gulp.dest( paths.buildDir + "/css/" ));
 });
 
 
@@ -67,7 +67,7 @@ gulp.task("sprite", function () {
 		.pipe(spritesmith({
 			imgName: "sprite.png",
 			cssName: "_sprite_" + spriteData[i] + ".scss",
-			imgPath: "img/" + spriteData[i] + "/sprite.png",
+			imgPath: "../img/" + spriteData[i] + "/sprite.png",
 			cssFormat: "scss",
 			padding: 20,
 			cssVarMap: function (sprite) {

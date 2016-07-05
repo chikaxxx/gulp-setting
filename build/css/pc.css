@@ -165,7 +165,7 @@ button {
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
-  background-image: url(img/pc/sprite.png);
+  background-image: url(../img/pc/sprite.png);
   background-position: 0px 0px;
   width: 65px;
   height: 64px; }
@@ -174,7 +174,7 @@ button {
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
-  background-image: url(img/pc/sprite.png);
+  background-image: url(../img/pc/sprite.png);
   background-position: -84px -84px;
   width: 64px;
   height: 64px; }
@@ -183,7 +183,7 @@ button {
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
-  background-image: url(img/pc/sprite.png);
+  background-image: url(../img/pc/sprite.png);
   background-position: -85px 0px;
   width: 65px;
   height: 64px; }
