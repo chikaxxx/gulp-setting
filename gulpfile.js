@@ -65,7 +65,7 @@ gulp.task("sprite", function () {
 		console.log(spriteData[i]);
 		var img = gulp.src([paths.spriteDir + "/" + spriteData[i] + "/*.*"])
 		.pipe(spritesmith({
-			imgName: "sprite_" + spriteData[i] + ".png",
+			imgName: "sprite.png",
 			cssName: "_img_" + spriteData[i] + ".scss",
 			imgPath: "img/" + spriteData[i] + "/sprite.png",
 			cssFormat: "scss",
