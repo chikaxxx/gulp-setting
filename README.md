@@ -22,9 +22,10 @@ $ gulp		#ファイルの監視がスタートする
 ```
 $ gulp sprite	
 ```
-* 画像読み込み元	`assets/sprite/pc,sp/`  
-* 画像生成先	`build/img/pc,sp/sprite.png`
-* scss生成先		`assets/style/pc,sp/_sprite.scss`
+* 画像読み込み元	`assets/sprite/pc/`		
+* 画像生成先	`build/img/pc/sprite.png`
+* scss生成先		`assets/style/_sprite_pc.scss`  
+※PCディレクトリの場合。SPディレクトリも同様
 
 
 ## フォルダ構成
